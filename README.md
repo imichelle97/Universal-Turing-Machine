@@ -28,3 +28,7 @@ After checkState (will refactor code later) - ends at 1 after C
 XC1011Dx010m011011Nx1010m011011Nx101101101110mNx1101101101110mNx110m010111101F101111S
 ```
 
+After checkInput (will refactor code later) - ends at 0 after Y
+```
+XCY011Dx0y0m011011Nx1010m011011Nx101101101110mNx1101101101110mNx110m010111101F101111S
+```
