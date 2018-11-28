@@ -62,23 +62,16 @@
 		</transition>
 		<transition>
 			<from>1</from>
-			<to>1</to>
-			<read>F</read>
-			<write>~</write>
-			<move>R</move>
-		</transition>
-		<transition>
-			<from>1</from>
 			<to>2</to>
 			<read/>
 			<write/>
 			<move>L</move>
 		</transition>
 		<transition>
-			<from>0</from>
+			<from>1</from>
 			<to>1</to>
-			<read>D</read>
-			<write>D</write>
+			<read>F</read>
+			<write>~</write>
 			<move>R</move>
 		</transition>
 		<transition>
@@ -90,10 +83,10 @@
 		</transition>
 		<transition>
 			<from>1</from>
-			<to>0</to>
-			<read>D</read>
-			<write>D</write>
-			<move>S</move>
+			<to>1</to>
+			<read>P</read>
+			<write>0</write>
+			<move>R</move>
 		</transition>
 		<transition>
 			<from>0</from>
@@ -101,6 +94,13 @@
 			<read>!D&amp;!N</read>
 			<write>~</write>
 			<move>R</move>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>0</to>
+			<read>D</read>
+			<write>D</write>
+			<move>S</move>
 		</transition>
 		<transition>
 			<from>1</from>
@@ -117,6 +117,13 @@
 			<move>R</move>
 		</transition>
 		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>D</read>
+			<write>D</write>
+			<move>R</move>
+		</transition>
+		<transition>
 			<from>1</from>
 			<to>1</to>
 			<read>z</read>
@@ -128,6 +135,13 @@
 			<to>1</to>
 			<read>y</read>
 			<write>1</write>
+			<move>R</move>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>N</read>
+			<write>D</write>
 			<move>R</move>
 		</transition>
 		<transition>
@@ -149,13 +163,6 @@
 			<to>1</to>
 			<read>S</read>
 			<write>~</write>
-			<move>R</move>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>N</read>
-			<write>D</write>
 			<move>R</move>
 		</transition>
 		<!--The list of automata-->
