@@ -4,8 +4,9 @@
 		<!--The list of states.-->
 		<block id="0" name="q0">
 			<tag>Machine0</tag>
-			<x>263.0</x>
+			<x>262.0</x>
 			<y>263.0</y>
+			<initial/>
 		</block>
 		<block id="1" name="q1">
 			<tag>Machine1</tag>
@@ -33,32 +34,12 @@
 			<y>403.0</y>
 			<final/>
 		</block>
-		<block id="6" name="q6">
-			<tag>Machine6</tag>
-			<x>262.0</x>
-			<y>147.0</y>
-			<initial/>
-		</block>
 		<!--The list of transitions.-->
 		<transition>
 			<from>3</from>
 			<to>4</to>
-			<read/>
+			<read>X</read>
 			<write>1</write>
-			<move>R</move>
-		</transition>
-		<transition>
-			<from>2</from>
-			<to>3</to>
-			<read>C</read>
-			<write>C</write>
-			<move>L</move>
-		</transition>
-		<transition>
-			<from>6</from>
-			<to>0</to>
-			<read>z</read>
-			<write>z</write>
 			<move>R</move>
 		</transition>
 		<transition>
@@ -77,48 +58,20 @@
 		</transition>
 		<transition>
 			<from>1</from>
-			<to>1</to>
-			<read>c</read>
-			<write>c</write>
-			<move>R</move>
-		</transition>
-		<transition>
-			<from>6</from>
-			<to>6</to>
-			<read>!z</read>
-			<write>~</write>
-			<move>R</move>
-		</transition>
-		<transition>
-			<from>3</from>
-			<to>4</to>
-			<read>X</read>
-			<write>1</write>
-			<move>R</move>
-		</transition>
-		<transition>
-			<from>2</from>
-			<to>2</to>
-			<read>!C</read>
-			<write>~</write>
-			<move>L</move>
-		</transition>
-		<transition>
-			<from>1</from>
 			<to>5</to>
 			<read>0</read>
 			<write>0</write>
 			<move>S</move>
 		</transition>
 		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>0</read>
-			<write>0</write>
+			<from>3</from>
+			<to>4</to>
+			<read/>
+			<write>1</write>
 			<move>R</move>
 		</transition>
 		<transition>
-			<from>4</from>
+			<from>1</from>
 			<to>1</to>
 			<read>c</read>
 			<write>c</write>
@@ -131,13 +84,40 @@
 			<write>c</write>
 			<move>L</move>
 		</transition>
+		<transition>
+			<from>2</from>
+			<to>2</to>
+			<read>!C</read>
+			<write>~</write>
+			<move>L</move>
+		</transition>
+		<transition>
+			<from>4</from>
+			<to>1</to>
+			<read>c</read>
+			<write>c</write>
+			<move>R</move>
+		</transition>
+		<transition>
+			<from>2</from>
+			<to>3</to>
+			<read>C</read>
+			<write>C</write>
+			<move>L</move>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>0</read>
+			<write>0</write>
+			<move>R</move>
+		</transition>
 		<!--The list of automata-->
 		<Machine0/>
 		<Machine2/>
 		<Machine1/>
 		<Machine4/>
 		<Machine3/>
-		<Machine6/>
 		<Machine5/>
 	</automaton>
 </structure>
