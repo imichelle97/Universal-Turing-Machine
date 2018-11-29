@@ -47,55 +47,6 @@
 		<!--The list of transitions.-->
 		<transition>
 			<from>3</from>
-			<to>3</to>
-			<read>!□</read>
-			<write>~</write>
-			<move>R</move>
-		</transition>
-		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>~</read>
-			<write>~</write>
-			<move>L</move>
-		</transition>
-		<transition>
-			<from>1</from>
-			<to>2</to>
-			<read/>
-			<write>C</write>
-			<move>L</move>
-		</transition>
-		<transition>
-			<from>2</from>
-			<to>3</to>
-			<read/>
-			<write>1</write>
-			<move>R</move>
-		</transition>
-		<transition>
-			<from>6</from>
-			<to>6</to>
-			<read>!□</read>
-			<write>~</write>
-			<move>L</move>
-		</transition>
-		<transition>
-			<from>7</from>
-			<to>8</to>
-			<read>D</read>
-			<write>D</write>
-			<move>S</move>
-		</transition>
-		<transition>
-			<from>6</from>
-			<to>7</to>
-			<read/>
-			<write/>
-			<move>R</move>
-		</transition>
-		<transition>
-			<from>3</from>
 			<to>4</to>
 			<read/>
 			<write>S</write>
@@ -106,6 +57,55 @@
 			<to>6</to>
 			<read/>
 			<write>Z</write>
+			<move>L</move>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>1</to>
+			<read>~</read>
+			<write>~</write>
+			<move>L</move>
+		</transition>
+		<transition>
+			<from>3</from>
+			<to>3</to>
+			<read>!□</read>
+			<write>~</write>
+			<move>R</move>
+		</transition>
+		<transition>
+			<from>2</from>
+			<to>3</to>
+			<read/>
+			<write>1</write>
+			<move>R</move>
+		</transition>
+		<transition>
+			<from>7</from>
+			<to>8</to>
+			<read>D</read>
+			<write>D</write>
+			<move>S</move>
+		</transition>
+		<transition>
+			<from>6</from>
+			<to>6</to>
+			<read>!□</read>
+			<write>~</write>
+			<move>L</move>
+		</transition>
+		<transition>
+			<from>6</from>
+			<to>7</to>
+			<read/>
+			<write/>
+			<move>R</move>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>2</to>
+			<read/>
+			<write>C</write>
 			<move>L</move>
 		</transition>
 		<transition>
