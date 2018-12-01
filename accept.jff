@@ -79,10 +79,10 @@
 			<y>711.0</y>
 			<final/>
 		</block>
-		<block id="15" name="q15">
-			<tag>Machine15</tag>
-			<x>406.0</x>
-			<y>305.0</y>
+		<block id="15" name="remainingInput">
+			<tag>remainingInput.jff</tag>
+			<x>252.0</x>
+			<y>337.0</y>
 		</block>
 		<block id="16" name="q16">
 			<tag>Machine16</tag>
@@ -90,27 +90,26 @@
 			<y>485.0</y>
 			<final/>
 		</block>
+		<block id="18" name="q18">
+			<tag>Machine18</tag>
+			<x>539.0</x>
+			<y>232.0</y>
+			<final/>
+		</block>
 		<!--The list of transitions.-->
-		<transition>
-			<from>11</from>
-			<to>16</to>
-			<read/>
-			<write>A</write>
-			<move>S</move>
-		</transition>
-		<transition>
-			<from>4</from>
-			<to>5</to>
-			<read>S</read>
-			<write>S</write>
-			<move>L</move>
-		</transition>
 		<transition>
 			<from>9</from>
 			<to>7</to>
 			<read>0</read>
 			<write>R</write>
 			<move>R</move>
+		</transition>
+		<transition>
+			<from>12</from>
+			<to>14</to>
+			<read>F</read>
+			<write>F</write>
+			<move>S</move>
 		</transition>
 		<transition>
 			<from>2</from>
@@ -127,25 +126,25 @@
 			<move>R</move>
 		</transition>
 		<transition>
-			<from>5</from>
-			<to>0</to>
-			<read>~</read>
-			<write>~</write>
-			<move>L</move>
+			<from>10</from>
+			<to>11</to>
+			<read>V</read>
+			<write>A</write>
+			<move>S</move>
 		</transition>
 		<transition>
-			<from>3</from>
-			<to>5</to>
+			<from>10</from>
+			<to>12</to>
+			<read>!V</read>
+			<write>~</write>
+			<move>S</move>
+		</transition>
+		<transition>
+			<from>8</from>
+			<to>10</to>
 			<read>S</read>
 			<write>S</write>
 			<move>L</move>
-		</transition>
-		<transition>
-			<from>15</from>
-			<to>15</to>
-			<read>!C</read>
-			<write>~</write>
-			<move>R</move>
 		</transition>
 		<transition>
 			<from>3</from>
@@ -155,18 +154,11 @@
 			<move>R</move>
 		</transition>
 		<transition>
-			<from>7</from>
-			<to>10</to>
-			<read>S</read>
-			<write>S</write>
-			<move>L</move>
-		</transition>
-		<transition>
-			<from>12</from>
-			<to>14</to>
-			<read>F</read>
-			<write>F</write>
-			<move>S</move>
+			<from>1</from>
+			<to>2</to>
+			<read>X</read>
+			<write>v</write>
+			<move>R</move>
 		</transition>
 		<transition>
 			<from>13</from>
@@ -190,15 +182,15 @@
 			<move>S</move>
 		</transition>
 		<transition>
-			<from>0</from>
-			<to>0</to>
-			<read>!C</read>
-			<write>~</write>
+			<from>4</from>
+			<to>5</to>
+			<read>S</read>
+			<write>S</write>
 			<move>L</move>
 		</transition>
 		<transition>
-			<from>9</from>
-			<to>10</to>
+			<from>3</from>
+			<to>5</to>
 			<read>S</read>
 			<write>S</write>
 			<move>L</move>
@@ -211,32 +203,11 @@
 			<move>R</move>
 		</transition>
 		<transition>
-			<from>8</from>
-			<to>8</to>
-			<read>!S</read>
+			<from>0</from>
+			<to>0</to>
+			<read>!C</read>
 			<write>~</write>
-			<move>R</move>
-		</transition>
-		<transition>
-			<from>10</from>
-			<to>11</to>
-			<read>V</read>
-			<write>A</write>
-			<move>S</move>
-		</transition>
-		<transition>
-			<from>2</from>
-			<to>3</to>
-			<read>F</read>
-			<write>F</write>
-			<move>R</move>
-		</transition>
-		<transition>
-			<from>10</from>
-			<to>12</to>
-			<read>!V</read>
-			<write>~</write>
-			<move>S</move>
+			<move>L</move>
 		</transition>
 		<transition>
 			<from>15</from>
@@ -246,11 +217,25 @@
 			<move>L</move>
 		</transition>
 		<transition>
-			<from>13</from>
-			<to>16</to>
-			<read/>
-			<write>A</write>
-			<move>S</move>
+			<from>5</from>
+			<to>0</to>
+			<read>~</read>
+			<write>~</write>
+			<move>L</move>
+		</transition>
+		<transition>
+			<from>2</from>
+			<to>3</to>
+			<read>F</read>
+			<write>F</write>
+			<move>R</move>
+		</transition>
+		<transition>
+			<from>8</from>
+			<to>8</to>
+			<read>!S</read>
+			<write>~</write>
+			<move>R</move>
 		</transition>
 		<transition>
 			<from>6</from>
@@ -258,6 +243,27 @@
 			<read>F</read>
 			<write>F</write>
 			<move>R</move>
+		</transition>
+		<transition>
+			<from>0</from>
+			<to>15</to>
+			<read>C</read>
+			<write>C</write>
+			<move>R</move>
+		</transition>
+		<transition>
+			<from>11</from>
+			<to>16</to>
+			<read/>
+			<write>A</write>
+			<move>S</move>
+		</transition>
+		<transition>
+			<from>7</from>
+			<to>8</to>
+			<read>0</read>
+			<write>A</write>
+			<move>S</move>
 		</transition>
 		<transition>
 			<from>1</from>
@@ -295,13 +301,6 @@
 			<move>R</move>
 		</transition>
 		<transition>
-			<from>7</from>
-			<to>8</to>
-			<read>0</read>
-			<write>A</write>
-			<move>S</move>
-		</transition>
-		<transition>
 			<from>4</from>
 			<to>4</to>
 			<read>1</read>
@@ -344,10 +343,38 @@
 			<move>R</move>
 		</transition>
 		<transition>
-			<from>0</from>
-			<to>1</to>
-			<read>C</read>
-			<write>C</write>
+			<from>4</from>
+			<to>3</to>
+			<read>0</read>
+			<write>0</write>
+			<move>R</move>
+		</transition>
+		<transition>
+			<from>13</from>
+			<to>16</to>
+			<read/>
+			<write>A</write>
+			<move>S</move>
+		</transition>
+		<transition>
+			<from>9</from>
+			<to>10</to>
+			<read>S</read>
+			<write>S</write>
+			<move>L</move>
+		</transition>
+		<transition>
+			<from>1</from>
+			<to>2</to>
+			<read>1</read>
+			<write>v</write>
+			<move>R</move>
+		</transition>
+		<transition>
+			<from>7</from>
+			<to>10</to>
+			<read>S</read>
+			<write>S</write>
 			<move>L</move>
 		</transition>
 		<transition>
@@ -358,25 +385,11 @@
 			<move>R</move>
 		</transition>
 		<transition>
-			<from>8</from>
-			<to>10</to>
-			<read>S</read>
-			<write>S</write>
-			<move>L</move>
-		</transition>
-		<transition>
-			<from>4</from>
-			<to>3</to>
-			<read>0</read>
-			<write>0</write>
-			<move>R</move>
-		</transition>
-		<transition>
-			<from>1</from>
-			<to>2</to>
-			<read>1</read>
-			<write>v</write>
-			<move>R</move>
+			<from>15</from>
+			<to>18</to>
+			<read>F</read>
+			<write>F</write>
+			<move>S</move>
 		</transition>
 		<!--The list of automata-->
 		<Machine8/>
@@ -384,13 +397,121 @@
 		<Machine9/>
 		<Machine11/>
 		<Machine10/>
-		<Machine15/>
 		<Machine14/>
 		<Machine13/>
 		<Machine12/>
+		<Machine18/>
 		<Machine16/>
 		<Machine0/>
 		<Machine2/>
+		<remainingInput.jff>
+			<!--The list of states.-->
+			<block id="0" name="q0">
+				<tag>Machine0</tag>
+				<x>185.0</x>
+				<y>235.0</y>
+				<initial/>
+			</block>
+			<block id="1" name="q1">
+				<tag>Machine1</tag>
+				<x>348.0</x>
+				<y>236.0</y>
+			</block>
+			<block id="2" name="q2">
+				<tag>Machine2</tag>
+				<x>505.0</x>
+				<y>242.0</y>
+				<final/>
+			</block>
+			<block id="3" name="q3">
+				<tag>Machine3</tag>
+				<x>329.0</x>
+				<y>346.0</y>
+			</block>
+			<block id="4" name="q4">
+				<tag>Machine4</tag>
+				<x>489.0</x>
+				<y>346.0</y>
+				<final/>
+			</block>
+			<!--The list of transitions.-->
+			<transition>
+				<from>0</from>
+				<to>0</to>
+				<read>O</read>
+				<write>O</write>
+				<move>R</move>
+			</transition>
+			<transition>
+				<from>0</from>
+				<to>0</to>
+				<read>0</read>
+				<write>0</write>
+				<move>R</move>
+			</transition>
+			<transition>
+				<from>1</from>
+				<to>2</to>
+				<read>F</read>
+				<write>F</write>
+				<move>S</move>
+			</transition>
+			<transition>
+				<from>0</from>
+				<to>3</to>
+				<read>D</read>
+				<write>D</write>
+				<move>R</move>
+			</transition>
+			<transition>
+				<from>0</from>
+				<to>3</to>
+				<read>N</read>
+				<write>N</write>
+				<move>R</move>
+			</transition>
+			<transition>
+				<from>3</from>
+				<to>3</to>
+				<read>!C</read>
+				<write>~</write>
+				<move>L</move>
+			</transition>
+			<transition>
+				<from>1</from>
+				<to>1</to>
+				<read>!F</read>
+				<write>~</write>
+				<move>R</move>
+			</transition>
+			<transition>
+				<from>0</from>
+				<to>1</to>
+				<read>Y</read>
+				<write>Y</write>
+				<move>R</move>
+			</transition>
+			<transition>
+				<from>0</from>
+				<to>1</to>
+				<read>1</read>
+				<write>1</write>
+				<move>R</move>
+			</transition>
+			<transition>
+				<from>3</from>
+				<to>4</to>
+				<read>C</read>
+				<write>C</write>
+				<move>S</move>
+			</transition>
+			<!--The list of automata-->
+			<Machine0/>
+			<Machine2/>
+			<Machine1/>
+			<Machine4/>
+			<Machine3/>
+		</remainingInput.jff>
 		<Machine1/>
 		<Machine4/>
 		<Machine3/>
